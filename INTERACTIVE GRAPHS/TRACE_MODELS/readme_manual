@@ -1,0 +1,39 @@
+7 traces and 7 models
+axes = az.plot_trace(mm_trace_region_AFR,compact=True, combined=True);
+fig = axes.ravel()[0].figure
+fig.savefig('G:/SUBMISSIONNNNNN/GRAPHS AND PICTURES/x.pmg/trace_model1')
+axes = az.plot_trace(mm_trace_region_AFR_VIM,compact=True, combined=True);
+fig = axes.ravel()[0].figure
+fig.savefig('G:/SUBMISSIONNNNNN/GRAPHS AND PICTURES/x.pmg/trace_model2L1')
+axes = az.plot_trace(mm_trace_region_VIM_LEVEL2,compact=True, combined=True);
+fig = axes.ravel()[0].figure
+fig.savefig('G:/SUBMISSIONNNNNN/GRAPHS AND PICTURES/x.pmg/trace_model2L2')
+axes = az.plot_trace(mm_trace_region_VISM_LEVEL2,compact=True, combined=True);
+fig = axes.ravel()[0].figure
+fig.savefig('G:/SUBMISSIONNNNNN/GRAPHS AND PICTURES/x.pmg/trace_model2L2_VISM')
+axes = az.plot_trace(mm_trace_region_AFR_VISMCO,compact=True, combined=True);
+fig = axes.ravel()[0].figure
+fig.savefig('G:/SUBMISSIONNNNNN/GRAPHS AND PICTURES/x.pmg/trace_model2L2_VISMCO')
+axes = az.plot_trace(mm_trace_region_AFR_VISMCO2,compact=True, combined=True);
+fig = axes.ravel()[0].figure
+fig.savefig('G:/SUBMISSIONNNNNN/GRAPHS AND PICTURES/x.pmg/trace_model2L2_VISMCO2')
+axes = az.plot_trace(mm_trace_region_AFR_VISMCO2RD,compact=True, combined=True);
+fig = axes.ravel()[0].figure
+fig.savefig('G:/SUBMISSIONNNNNN/GRAPHS AND PICTURES/x.pmg/trace_model2L2_VISMCO_CROSS')
+
+
+
+pm.model_to_graphviz(multilevel_model_region).render(
+    directory='G:/SUBMISSIONNNNNN/GRAPHS AND PICTURES/x.pmg',format='png',filename='MODEL0_NULL')
+pm.model_to_graphviz(multilevel_model_region_VIML1).render(
+    directory='G:/SUBMISSIONNNNNN/GRAPHS AND PICTURES/x.pmg',format='png',filename='MODEL1_L1')
+pm.model_to_graphviz(multilevel_model_region_VIM_LEVEL2).render(
+    directory='G:/SUBMISSIONNNNNN/GRAPHS AND PICTURES/x.pmg',format='png',filename='MODEL1_L2')
+pm.model_to_graphviz(multilevel_model_region_VISM_LEVEL2).render(
+    directory='G:/SUBMISSIONNNNNN/GRAPHS AND PICTURES/x.pmg',format='png',filename='MODEL2_SLOPE')
+pm.model_to_graphviz(multilevel_model_region_VISMCO).render(
+    directory='G:/SUBMISSIONNNNNN/GRAPHS AND PICTURES/x.pmg',format='png',filename='MODEL2_SLOPECV')
+pm.model_to_graphviz(multilevel_model_region_VISMCO2).render(
+    directory='G:/SUBMISSIONNNNNN/GRAPHS AND PICTURES/x.pmg',format='png',filename='MODEL2_SLOPECV2')
+pm.model_to_graphviz(multilevel_model_region_VISMCO2RD).render(
+    directory='G:/SUBMISSIONNNNNN/GRAPHS AND PICTURES/x.pmg',format='png',filename='MODEL4_CROSS')
